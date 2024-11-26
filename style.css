@@ -402,3 +402,26 @@ hr:not(.thunder) {
     background-color: transparent;
   }
 }
+/* Diğer stil ayarları burada */
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#cheatglobal-link {
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+#cheatglobal-link:hover {
+    background-color: #444;
+}
