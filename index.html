@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rain"></div>
+
+    <div class="app-container">
+        <div class="weather-box">
+            <h1>Hava Durumu</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Şehir girin..." autocomplete="off">
+                <button onclick="getWeather()">Göster</button>
+            </div>
+            <div id="weather-data" class="weather-data">
+                <div class="weather-icon">
+                    <img id="weather-img" src="" alt="">
+                </div>
+                <div class="weather-details">
+                    <h2 id="city-name"></h2>
+                    <div class="weather-info">
+                        <div>
+                            <h3>Sıcaklık</h3>
+                            <p id="temperature"></p>
+                        </div>
+                        <div>
+                            <h3>Durum</h3>
+                            <p id="condition"></p>
+                        </div>
+                        <div>
+                            <h3>Nem</h3>
+                            <p id="humidity"></p>
+                        </div>
+                        <div>
+                            <h3>Rüzgar Hızı</h3>
+                            <p id="wind"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="rain"></section>
+    <script src="rain.js"></script> 
+    <script src="script.js"></script> 
+</body>
+</html>
