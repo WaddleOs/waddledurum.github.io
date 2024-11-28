@@ -3,55 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hava Durumu Uygulaması</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Proxy Üretici</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="rain"></div>
-
-    <div class="app-container">
-        <div class="weather-box">
-            <h1>Hava Durumu</h1>
-            <div class="search-box">
-                <input type="text" id="city-input" placeholder="Şehir girin..." autocomplete="off">
-                <button onclick="getWeather()">Göster</button>
+    <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+        <div class="card shadow-lg">
+            <div class="card-header text-center bg-gradient">
+                <h1 class="text-white">✨ Proxy Üretici</h1>
             </div>
-            <div id="weather-data" class="weather-data">
-                <div class="weather-icon">
-                    <img id="weather-img" src="" alt="">
-                </div>
-                <div class="weather-details">
-                    <h2 id="city-name"></h2>
-                    <div class="weather-info">
-                        <div>
-                            <h3>Sıcaklık</h3>
-                            <p id="temperature"></p>
-                        </div>
-                        <div>
-                            <h3>Durum</h3>
-                            <p id="condition"></p>
-                        </div>
-                        <div>
-                            <h3>Nem</h3>
-                            <p id="humidity"></p>
-                        </div>
-                        <div>
-                            <h3>Rüzgar Hızı</h3>
-                            <p id="wind"></p>
-                        </div>
+            <div class="card-body">
+                <form id="proxyForm">
+                    <div class="mb-4">
+                        <label for="proxyCount" class="form-label text-pink">Kaç adet proxy üretmek istiyorsunuz? (max 1000):</label>
+                        <input type="number" id="proxyCount" class="form-control input-pink" min="1" max="1000" placeholder="Adet giriniz" required>
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary w-100 btn-pink">Proxy Üret</button>
+                </form>
+                <a id="downloadLink" class="btn btn-success w-100 mt-3 btn-pink" style="display: none;">proxies.txt İndir</a>
             </div>
         </div>
+        <footer class="mt-3">
+            <a href="https://cheatglobal.com" target="_blank" class="text-decoration-none footer-link">
+                CheatGlobal
+            </a>
+        </footer>
     </div>
-
-    <!-- Alt kısımda bağlantı ekleme -->
-    <footer>
-        <a href="https://cheatglobal.com" target="_blank" id="cheatglobal-link">cheatglobal</a>
-    </footer>
-
-    <section class="rain"></section>
-    <script src="rain.js"></script> 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>
